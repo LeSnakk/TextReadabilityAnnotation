@@ -14,8 +14,8 @@
 - Quellen: Gängige Nachrichtenportale, bpb, Ämter, ResearchGate, DSH, ACL Anthology, frei verfügbare literarische Texte.
 
 ## Sprachmodell/Interface
-- ChatGPT/LLaMA
-  - Unterschiede feststellbar?
+- ChatGPT || LLaMA
+  - Ggf. Unterschiede feststellbar?
 
 ## Experimentdesign
 - Ziel: Das Sprachmodell soll den Schwierigkeitsgrad verschiedener Texte annotieren.
