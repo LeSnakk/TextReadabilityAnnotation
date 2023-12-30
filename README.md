@@ -1,11 +1,6 @@
 # TextReadabilityAnnotation
 
-- Klassifizierung von Texten auf einer Skala von 1 bis 5 in Bezug auf ihren Lesbarkeitsindex (Readability) (1 für einfach, 5 für schwer).
-- Beispiele:
-  - Text: "Die Sonne scheint am Himmel, und die Vögel singen in den Bäumen."
-    - Readability: 1
-  - Text: "Sämtliche Konstellationen astronomischer Objekte sind von der Perspektive der Erde aus betrachtet einer kontinuierlichen Veränderung unterworfen, was die Präzision astronomischer Prognosen herausfordert."
-    - Readability: 5
+- Klassifizierung von Texten auf einer Skala von 0 bis 1 in Bezug auf ihren Lesbarkeitsindex (Readability) (0 für schwer, 1 für einfach).
 - Einrodnung und Vergleich der Annotationen des LLMs mit dem [CommonLit Ease of Readability Corpus](https://github.com/scrosseye/CLEAR-Corpus) (CLEAR-Corpus). 
 
 ## Datenbasis
