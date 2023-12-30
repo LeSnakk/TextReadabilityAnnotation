@@ -6,12 +6,16 @@
     - Readability: 1
   - Text: "Sämtliche Konstellationen astronomischer Objekte sind von der Perspektive der Erde aus betrachtet einer kontinuierlichen Veränderung unterworfen, was die Präzision astronomischer Prognosen herausfordert."
     - Readability: 5
-- Vergleich der Annotationen mit dem Flesch-Kincaid Readability Test, um die Genauigkeit des LLMs zu bewerten und Unterschiede zu analysieren.
+- Einrodnung und Vergleich der Annotationen des LLMs mit dem [CommonLit Ease of Readability Corpus](https://github.com/scrosseye/CLEAR-Corpus) (CLEAR-Corpus). 
 
 ## Datenbasis
-- Textsorten: Nachrichtenartikel, Geschichten (Kurz- und Kindergeschichten, Märchen), Leichte Sprache-Texte, Wissenschaftliche Artikel, Amtsdeutsch.
-- Sprache: Primär Deutsch, ggf. Englisch für höhere Präzision.
-- Quellen: Gängige Nachrichtenportale, bpb, Ämter, ResearchGate, DSH, ACL Anthology, frei verfügbare literarische Texte.
+- Es werden die 4.724 Textpassagen des [CLEAR-Corpus](https://github.com/scrosseye/CLEAR-Corpus) verwendet. Diese setzen sich aus Texten zusammen, die
+  - in Englisch verfasst sind,
+  - aus der CommonLit-Datenbank, dem Project Gutenberg, von Wikipedia sowie weiteren frei zugänglichen Bibliotheken stammen (genaue Quellenangaben im Corpus),
+  - zwischen 1791 und 2020 geschrieben wurden,
+  - dem Genre der Sachtexte und literarischen Texte angehören,
+  - eine Länge von 140 bis 200 Wörter aufweisen,
+  - in ihrer Logik nicht unterbrochen wurden.
 
 ## Sprachmodell/Interface
 - ChatGPT || LLaMA
@@ -22,4 +26,4 @@
 - Fragen zur Beurteilung:
   - Kann das Modell ein Textniveau bestimmen?
   - Anhand welcher Faktoren bestimmt das LLM die Readability (Satzlänge, Fachterminologie, Syntax usw.)?
-  - Inwieweit unterscheidet sich diese Bewertung von Flesch–Kincaid Readability tests?
+  - Inwieweit unterscheidet sich Bewertung mit den Flesch–Kincaid readability scores sowie der Beurteilung der Befragten des CLEAR-Corpus?
