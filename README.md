@@ -1,6 +1,6 @@
 # TextReadabilityAnnotation
 
-- Klassifizierung von Texten auf einer Skala von 0 bis 1 in Bezug auf ihren Lesbarkeitsindex (Readability) (0 für schwer, 1 für einfach).
+- Klassifizierung von Texten auf einer Skala von 0 bis 100 in Bezug auf ihren Lesbarkeitsindex (Readability) (0 für schwer, 100 für einfach).
 - Einrodnung und Vergleich der Annotationen des LLMs mit dem [CommonLit Ease of Readability Corpus](https://github.com/scrosseye/CLEAR-Corpus) (CLEAR-Corpus). 
 
 ## Datenbasis
@@ -13,8 +13,7 @@
   - in ihrer Logik nicht unterbrochen wurden.
 
 ## Sprachmodell/Interface
-- ChatGPT || LLaMA
-  - Ggf. Unterschiede feststellbar?
+- LLAMA 2
 
 ## Experimentdesign
 - Ziel: Das Sprachmodell soll den Schwierigkeitsgrad verschiedener Texte annotieren.
