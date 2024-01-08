@@ -6,7 +6,7 @@ Als Datenbasis wurde der [CLEAR-Corpus](https://github.com/scrosseye/CLEAR-Corpu
 
 Die Annotationen wurden vom LLM [Llama 2](https://huggingface.co/meta-llama/Llama-2-7b-chat-hf) vorgenommen. Aus Performancegründen wurde die Version mit 7 Milliarden Parametern gewählt.
 
-Die Kommunikation mit dem LLM fand über ein Python-Skript in Form eines [Kaggle-Notebooks](hhttps://www.kaggle.com/code/rundex/textreadabilityannotation) statt.
+Die Kommunikation mit dem LLM fand mittels Python-Skript über ein Jupyter Notebook in Form eines [Kaggle-Notebooks](hhttps://www.kaggle.com/code/rundex/textreadabilityannotation) statt.
 
 ## Umsetzung
 
