@@ -6,13 +6,13 @@ Als Datenbasis wurde der [CLEAR-Corpus](https://github.com/scrosseye/CLEAR-Corpu
 
 Die Annotationen wurden vom LLM [Llama 2](https://huggingface.co/meta-llama/Llama-2-7b-chat-hf) vorgenommen. Aus Performancegründen wurde die Version mit 7 Milliarden Parametern gewählt.
 
-Die Kommunikation mit dem LLM fand über ein Python-Skript in Form eines [Kaggle-Notebooks](https://www.kaggle.com/code/rundex/textreadabilityannotation) statt.
+Die Kommunikation mit dem LLM fand über ein Python-Skript in Form eines [Kaggle-Notebooks](hhttps://www.kaggle.com/code/rundex/textreadabilityannotation) statt.
 
 ## Umsetzung
 
-Zunächst wurden die Texte aus dem Datensatz extrahiert. Im Anschluss wurde für jeden Text einer Promt an das LLM gesendet; zusammengesetzt aus `"How would you rate the readability in percent of the following text 0% means hard to read, 100% means easy to read`, dem Text `"{excerpts[i]}"?` sowie einem Hinweis, wie die Antwort aufgebaut sein soll: `Your answer should look like this "Score", following the score, and "Explanation", why you rated it like this."`
+Zunächst wurden die Texte aus dem Datensatz extrahiert. Im Anschluss wurde für jeden Text einer Promt an das LLM gesendet; zusammengesetzt aus `"How would you rate the readability in percent of the following text 0% means hard to read, 100% means easy to read`, dem Text `"{excerpts[i]}"?` sowie einem Hinweis, wie die Antwort aufgebaut sein soll: `Your answer should look like this "Score", following the score, and "Explanation", why you rated it like this."` Das verwendete Skript befindet sich [hier](project-files/llm-data/llm-prompts/TextReadabilityAnnotationKaggle.ipynb).
 
-Anschließend wurde der `Score` und die `Explanation` aus dem Rückgabestring des LLM extrahiert und der jeweilige Texteintrag im Datensatz um diese Ergebnisse ergänzt.
+Anschließend wurde der `Score` und die `Explanation` aus dem Rückgabestring des LLM extrahiert und der jeweilige Texteintrag im Datensatz um diese Ergebnisse ergänzt. Der aktualisierte Datensatz wird [hier]() gespeichert. 
 
 ## Evaluation
 Es war mit einer gewissen Schwierigkeit verbunden, einen Prompt auszuarbeiten, der sinnvolle Antworten bem LLM hervorrief, da das LLM nicht selten gar keine Antworten zurückgab. Zudem enthielten die Antworten häufig keine Annotationen sondern gaben lediglich die Aufgabenstellung in umformulierter Form oder etwas ganz anderes zurück zurück. Mit dem aktuellen Prompt habe ich versucht, diesen Problemen so gut es geht entgegenzuwirken; der aktuelle Prompt gibt jedoch leider noch immer häufig keine Annotationen zurück.
