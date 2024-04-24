@@ -1,0 +1,45 @@
+llama-3-70b-instruct
+
+Here are the readability scores for each text:
+
+Text ID: 5066
+Score: 40%
+Explanation: The text is written in a formal and technical tone, with complex sentences and vocabulary (e.g., "commutator", "insulated condition", "flanges"). The language is dense and requires some technical knowledge to understand.
+
+Text ID: 5350
+Score: 30%
+Explanation: The text is written in a formal and scientific tone, with complex sentences and vocabulary (e.g., "atmospheric electricity", "resistance of water", "square mm."). The language is dense and requires some scientific knowledge to understand.
+
+Text ID: 7266
+Score: 70%
+Explanation: The text is written in a narrative tone, with simpler sentences and vocabulary. The language is more accessible, and the story is easy to follow.
+
+Text ID: 6569
+Score: 80%
+Explanation: The text is written in a narrative tone, with simple sentences and vocabulary. The language is clear and easy to understand, and the story is engaging.
+
+Text ID: 5759
+Score: 60%
+Explanation: The text is written in a narrative tone, with simple sentences and vocabulary. The language is clear and easy to understand, but some sentences are a bit long and complex.
+
+Text ID: 7177
+Score: 50%
+Explanation: The text is written in a fable-like tone, with simple sentences and vocabulary. However, the language is a bit formal and the story is somewhat abstract, making it harder to understand.
+
+Text ID: 4791
+Score: 90%
+Explanation: The text is written in a narrative tone, with very simple sentences and vocabulary. The language is clear and easy to understand, and the story is engaging and easy to follow.
+
+Text ID: 5600
+Score: 80%
+Explanation: The text is written in a narrative tone, with simple sentences and vocabulary. The language is clear and easy to understand, and the story is engaging.
+
+Text ID: 7021
+Score: 80%
+Explanation: The text is written in a narrative tone, with simple sentences and vocabulary. The language is clear and easy to understand, and the story is engaging.
+
+Text ID: 5521
+Score: 60%
+Explanation: The text is written in a descriptive tone, with simple sentences and vocabulary. The language is clear and easy to understand, but some sentences are a bit long and complex.
+
+

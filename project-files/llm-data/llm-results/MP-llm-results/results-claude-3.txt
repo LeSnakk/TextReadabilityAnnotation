@@ -1,0 +1,43 @@
+claude-3-haiku
+
+Here are the readability scores for each text:
+
+Text ID: 5066
+Score: 40%
+Explanation: The text is written in a formal, technical style with complex vocabulary and sentence structure. It requires a good understanding of technical concepts related to electrical generators and commutators.
+
+Text ID: 5350
+Score: 30% 
+Explanation: The text is written in a formal, scientific style with complex vocabulary and sentence structure. It requires a good understanding of electrical and scientific concepts to fully comprehend.
+
+Text ID: 7266
+Score: 70%
+Explanation: The text is written in a more narrative style with simpler vocabulary and sentence structure. The language is more accessible, and the story is easy to follow.
+
+Text ID: 6569
+Score: 80%
+Explanation: The text is written in a narrative style with simple, clear language. The vocabulary and sentence structure are straightforward, making it easy to read and understand.
+
+Text ID: 5759
+Score: 60%
+Explanation: The text is written in a narrative style with generally simple language, but some sentences are longer and more complex. The overall readability is good, but it requires a bit more focus to fully comprehend.
+
+Text ID: 7177
+Score: 50%
+Explanation: The text is written in a fable-like style with simple language, but the abstract nature of the story and the moral lesson make it slightly more challenging to read and understand.
+
+Text ID: 4791
+Score: 90%
+Explanation: The text is written in a highly engaging, narrative style with simple vocabulary and sentence structure. The language is very accessible and easy to read.
+
+Text ID: 5600
+Score: 80%
+Explanation: The text is written in a narrative style with simple, clear language. The vocabulary and sentence structure are straightforward, making it easy to read and understand.
+
+Text ID: 7021
+Score: 80%
+Explanation: The text is written in a narrative style with simple, clear language. The vocabulary and sentence structure are straightforward, making it easy to read and understand.
+
+Text ID: 5521
+Score: 60%
+Explanation: The text is written in a descriptive style with generally simple language, but some sentences are longer and more complex. The overall readability is good, but it requires a bit more focus to fully comprehend.
