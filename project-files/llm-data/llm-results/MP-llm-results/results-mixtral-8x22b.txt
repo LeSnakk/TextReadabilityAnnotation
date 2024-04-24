@@ -1,0 +1,41 @@
+mixtral-8x22b-instruct
+
+Text ID: 5066
+Score: 30%
+Explanation: This text is moderately difficult to read due to its technical nature and the use of specialized vocabulary related to electrical engineering. However, the sentence structure is relatively simple and straightforward, making it somewhat accessible to a general audience.
+
+Text ID: 5350
+Score: 20%
+Explanation: This text is quite challenging to read due to its technical content and the use of scientific terminology. The text discusses electrical phenomena and experiments, which may not be familiar to a general audience. Additionally, the sentence structure is somewhat complex, further increasing the difficulty.
+
+Text ID: 7266
+Score: 80%
+Explanation: This text is relatively easy to read due to its simple sentence structure and the use of common vocabulary. The text tells a story about a father and daughter, which is a familiar and accessible theme. However, the text does contain some archaic language and expressions, which may slightly increase the difficulty for some readers.
+
+Text ID: 6569
+Score: 90%
+Explanation: This text is very easy to read due to its simple sentence structure and the use of common vocabulary. The text tells a story about children and their daily activities, which is a familiar and accessible theme. The text is written in a clear and concise manner, making it easy to follow.
+
+Text ID: 5759
+Score: 70%
+Explanation: This text is moderately easy to read due to its simple sentence structure and the use of common vocabulary. The text tells a story about a dog and its training, which is a familiar and accessible theme. However, the text does contain some technical terms related to animal training, which may slightly increase the difficulty for some readers.
+
+Text ID: 7177
+Score: 90%
+Explanation: This text is very easy to read due to its simple sentence structure and the use of common vocabulary. The text tells a story about a frog and its self-conceit, which is a familiar and accessible theme. The text is written in a clear and concise manner, making it easy to follow.
+
+Text ID: 4791
+Score: 90%
+Explanation: This text is very easy to read due to its simple sentence structure and the use of common vocabulary. The text tells a story about a boy and his magical beanstalk, which is a familiar and accessible theme. The text is written in a clear and concise manner, making it easy to follow.
+
+Text ID: 5600
+Score: 80%
+Explanation: This text is relatively easy to read due to its simple sentence structure and the use of common vocabulary. The text tells a story about a girl and her new kitten, which is a familiar and accessible theme. However, the text does contain some technical terms related to pet care, which may slightly increase the difficulty for some readers.
+
+Text ID: 7021
+Score: 90%
+Explanation: This text is very easy to read due to its simple sentence structure and the use of common vocabulary. The text tells a story about a fox and its curiosity, which is a familiar and accessible theme. The text is written in a clear and concise manner, making it easy to follow.
+
+Text ID: 5521
+Score: 70%
+Explanation: This text is moderately easy to read due to its simple sentence structure and the use of common vocabulary. The text provides information about hedgehogs, which is a familiar and accessible theme. However, the text does contain some technical terms related to animal behavior, which may slightly increase the difficulty for some readers.
