@@ -14,6 +14,11 @@
 
 ## Sprachmodell/Interface
 - LLAMA 2
+### 10 Ausgewählte Texte zusätzlich mit
+- LLAMA 3 70B
+- Claude 3
+- Mixtral 8x22B
+- ChatGPT 3.5
 
 ## Experimentdesign
 - Ziel: Das Sprachmodell soll den Schwierigkeitsgrad verschiedener Texte annotieren.
