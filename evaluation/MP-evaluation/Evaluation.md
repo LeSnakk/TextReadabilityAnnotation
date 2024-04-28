@@ -1,26 +1,23 @@
 # TextReadabilityAnnotation – Evaluation
-Ziel war es, ein Large Language Model Texte anhand ihres Schwierigkeitsgrades annotieren zu lassen. Die Ergebnisse dieses Experimentes sollten dann im Anschluss gegenüber der Bewertungen des [CommonLit Ease of Readability Corpus](https://github.com/scrosseye/CLEAR-Corpus) eingeordnet werden.
+Aufbauend auf den [Ergebnissen des ursprünglichen LLM-Experiments](https://github.com/LeSnakk/TextReadabilityAnnotation/blob/195739b6082a934c81cd8b296993ed240c6ca6df/evaluation/Evaluation.md), die eher ernüchternd ausfielen, befasst sich das folgende, daran anschließende Experiment mit der Performance anderer Sprachmodelle als LLaMA 2 bei gleichbleibender Fragestellung. 
 
 ## Umgebung
-Als Datenbasis wurde der [CLEAR-Corpus](https://github.com/scrosseye/CLEAR-Corpus) benutzt, da die dort vorhandenen Texte bereits anhand ihrer Schwierigkeit bewertet wurden und die Texte darüber hinaus frei nutzbar sind.
+Als Datenbasis wurde eine [kurierte Auswahl](https://github.com/LeSnakk/TextReadabilityAnnotation/blob/main/project-files/llm-data/llm-results/MP-llm-results/MP_CLEAR_Corpus_6.01_curated_LLM-output.csv) von 10 Texten aus den [CLEAR-Corpus](https://github.com/scrosseye/CLEAR-Corpus) benutzt, die einen Querschnitt aus den verschiedenen Schwierigketsstufen an Texten darstellt.
 
-Die Annotationen wurden vom LLM [Llama 2](https://huggingface.co/meta-llama/Llama-2-7b-chat-hf) vorgenommen. Aus Performancegründen wurde die Version mit 7 Milliarden Parametern gewählt.
+Die Readability der Texte wurden von folgenden Sprachmodellen annotiert:
+- LLaMA 3 70B
+- Claude 3
+- Mixtral 8x22b
+- ChatGPT 3.5
+- (LLaMa 2)
 
-Die Kommunikation mit dem LLM fand mittels Python-Skript über ein Jupyter Notebook in Form eines [Kaggle-Notebooks](https://www.kaggle.com/code/rundex/textreadabilityannotation) statt.
+## Ergebnisse & Evaluation
+Die Annotationsergebnisse der Sprachmodelle fielen insgesamt besser als bei dem vorherigen Experiment mit LLaMA 2 aus. Die Antworten von [LLaMA 3](https://github.com/LeSnakk/TextReadabilityAnnotation/blob/main/project-files/llm-data/llm-results/MP-llm-results/results-llama-3-70b.txt), [Claude 3](https://github.com/LeSnakk/TextReadabilityAnnotation/blob/main/project-files/llm-data/llm-results/MP-llm-results/results-claude-3.txt), [Mixtral](https://github.com/LeSnakk/TextReadabilityAnnotation/blob/main/project-files/llm-data/llm-results/MP-llm-results/results-mixtral-8x22b.txt) und [ChatGPT 3.5](https://github.com/LeSnakk/TextReadabilityAnnotation/blob/main/project-files/llm-data/llm-results/MP-llm-results/results-gpt-3.5.txt) sind in der [Ergebnistabelle](https://github.com/LeSnakk/TextReadabilityAnnotation/blob/main/project-files/llm-data/llm-results/MP-llm-results/MP_CLEAR_Corpus_6.01_curated_LLM-output.csv) zusammengetragen.
 
-## Umsetzung
+Da die Ergebnisse sehr unterschiedlich sind, ist es schwierig, die Ergebnisse der LLMs objektiv miteinander zu vergleichen. Allerdings lässt sich verglichen mit den vorherigen Ergebnissen von LLaMA 2 die Tendenz einer Verbesserung erkennen:
+- LLaMA 3 gab wesentlich differenziertere Antworten als beim vorherigen Experiment. Verglichen zu seinem Vorgänger waren auch die Erklärungen individueller auf die Texte zugeschnitten. Darüber hinaus schienen die Readability-Scores im Gegensatz zu den LLaMA 2-Ergebnissen tatsächlich mit der Schwierigkeit der jeweiligen Texte zu korellieren.
+- Mixtral konnte insbesondere die schwierigen Texte gut von den einfacheren Texten abgrenzen. Das Sprachmodell hat die gesamte zur Verfügung stehende Bewertungsskala genutzt und ebenfalls plausible Erklärungen produziert. 
+- Claude 3 produzierte ähnliche Ergebnisse; die Werte sind zwischen denen von Mixtral und LLaMA 3 zu verorten.
+- Auffällig ist es, dass ChatGPT 3.5 scheinbar dazu tendiert, die Lesbarkeit der Texte bevorzugt positiv als negativ einzuschätzen. Verglichen mit den anderen LLMs schließt es nach LLaMa 2 am schlechtesten ab.
 
-Zunächst wurden die Texte aus dem Datensatz extrahiert. Im Anschluss wurde für jeden Text einer Prompt an das LLM gesendet; zusammengesetzt aus `"How would you rate the readability in percent of the following text 0% means hard to read, 100% means easy to read`, dem Text `"{excerpts[i]}"?` sowie einem Hinweis, wie die Antwort aufgebaut sein soll: `Your answer should look like this "Score", following the score, and "Explanation", why you rated it like this."` 
-
-Das verwendete Skript befindet sich [hier](https://github.com/LeSnakk/TextReadabilityAnnotation/blob/195739b6082a934c81cd8b296993ed240c6ca6df/project-files/llm-data/llm-prompts/TextReadabilityAnnotationKaggle.ipynb).
-
-Anschließend wurde der `Score` und die `Explanation` aus dem Rückgabestring des LLM extrahiert und der jeweilige Texteintrag im Datensatz um diese Ergebnisse ergänzt. Der aktualisierte Datensatz wird [hier](https://github.com/LeSnakk/TextReadabilityAnnotation/blob/195739b6082a934c81cd8b296993ed240c6ca6df/project-files/llm-data/llm-results/CLEAR_Corpus_6.01_LLM-output.csv) gespeichert und kann in Form einer [Tabelle](https://docs.google.com/spreadsheets/d/1chTMqs1MWS1JJ-rLmyu_ZOP8uCpJcNvWnZaQIUPBs6c/edit?usp=sharing) betrachtet werden.
-
-## Evaluation
-Es war mit einer gewissen Schwierigkeit verbunden, einen Prompt auszuarbeiten, der sinnvolle Antworten bem LLM hervorrief, da das LLM nicht selten gar keine Antworten zurückgab. Zudem enthielten die Antworten häufig keine Annotationen sondern gaben lediglich die Aufgabenstellung in umformulierter Form oder etwas ganz anderes zurück. Mit dem aktuellen Prompt habe ich versucht, diesen Problemen so gut es geht entgegenzuwirken; der aktuelle Prompt gibt jedoch leider noch immer häufig keine Annotationen zurück.
-
-Wenn das LLM die Readability des Textes mit einem Score beziffert, liegt dieser leider ausschließlich zwischen 60% und 90% Readability, was einer mittelschweren bis einfacheren Leseschwierigkeit entspricht. Das LLM hat somit keinen Text als schwierig eingestuft, obwohl die Datenbasis Texte mit verschiedenen Schwierigkeitsstufen beinhaltet. Die durch das LLM ermittelten Werte lassen sich zudem nicht mit den sich im Datensatz bereits befindlichen Bewertungen vergleichen oder validieren, da sich dort kein sinnvoller Zusammenhang feststellen lässt.
-
-Die Erklärungen, die das LLM für seine Bewertungen abgibt, sind sehr repetitiv und erwecken teilweise einen generischen Anschein, als seien sie nicht spezifisch für den jeweiligen Text ausgegeben worden. Teilweise wird die identische Erklärung mehreren Texten zugeordnet, unabhängig von der Bewertung der Texte. Die Erklärung beschränkt sich darüber hinaus auf Indikatoren wie Satzlänge und Wortwahl und vernachlässigt inhaltliche Komplexität. Ein aufgrunddessen scheinbar fehlende Verarbeitung der inhaltlichen Gesichtspunkte der Texte könnte das Scoring des LLMs erklären.
-
-Insgesamt ist das Ergebnis dieses Experiments sehr ernüchternd, da sich bilanzieren lässt, dass die Annotation der Readability eines Textes durch das Llama 2-Sprachmodell nicht erfolgreich war. Das auf diese Anforderung nicht näher trainierte Modell war nicht in der Lage, belastbare Aussagen über den Schwierigkeitsgrad eines Textes zu treffen. Die Annotationen ließen sich nicht einheitlich mit den Bewertungen des Datensatzes vergleichen. Um die Ergebnisse des Modells zu womöglich zu verbessern, müsste es genauer für diesen Task trainiert werden.
+Abschließend lässt sich bilanzieren, dass LLMs – wenn mit LLaMA 2 verglichen wird – erfolgreicher annotiert haben. Die von den LLMs gegebenen Erklärungen legen belegen jedoch, dass die Einschätzung der Readability ausschließlich durch Bewertung der Parameter wie Satzlänge, Satzbau, Grammatik und Vokabular erfolgt. Inhaltliche Faktoren wie die kognitive Komplexität, die durch den Text entsteht und entscheident für dessen Verständnis ist, werden nicht berücksichtigt.
