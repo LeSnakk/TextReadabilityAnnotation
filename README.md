@@ -26,3 +26,4 @@
   - Kann das Modell ein Textniveau bestimmen?
   - Anhand welcher Faktoren bestimmt das LLM die Readability (Satzlänge, Fachterminologie, Syntax usw.)?
   - Inwieweit unterscheidet sich Bewertung mit den Flesch–Kincaid readability scores sowie der Beurteilung der Befragten des CLEAR-Corpus?
+- Wie unterscheiden sich die Ergebnisse der verschiedenen Sprachmodelle?
